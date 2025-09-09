@@ -1,4 +1,4 @@
-# Demo of BQ Multimodal Capabilities (images and PDF)
+# Demo of BQ Multimodal Capabilities as well as using LLMs within BigQuery in General
 
 Prerequisites: 
 1. Please upload the data directory (without the data folder) into GCS and copy the uri.
