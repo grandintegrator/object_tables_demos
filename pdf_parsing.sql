@@ -2,7 +2,7 @@
 -- We create an object table (we support PDFs, Images, Audio, etc.)
 ------------------------------------------------------------------------------------------------------------------
 CREATE OR REPLACE EXTERNAL TABLE `edg_drinks.invoices_object_tables`
-WITH CONNECTION `projects/ajmalaziz-814-20250326021733/locations/us/connections/vertex_connection`
+WITH CONNECTION `projects/PROJECT_ID/locations/us/connections/vertex_connection`
 OPTIONS(
   object_metadata = 'SIMPLE',
   uris = [
@@ -24,7 +24,7 @@ OPTIONS(
 ------------------------------------------------------------------------------------------------------------------
 CREATE or REPLACE TABLE `object_tables_dataset.chunked_pdfs` AS (
   SELECT * FROM ML.PROCESS_DOCUMENT(
-  MODEL `ajmalaziz-814-20250326021733.object_tables_dataset.parser_model`,
+  MODEL `PROJECT_ID.object_tables_dataset.parser_model`,
   TABLE `object_tables_dataset.invoices_object_tables`,
   PROCESS_OPTIONS => (JSON '{"layout_config": {"chunking_config": {"chunk_size": 250}}}')
   )

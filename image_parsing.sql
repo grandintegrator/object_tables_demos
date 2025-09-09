@@ -2,7 +2,7 @@
 -- Create a Cloud Vision Model
 ------------------------------------------------------------------------------------------------------------------
 CREATE OR REPLACE MODEL
-  `ajmalaziz-814-20250326021733.object_tables_dataset.vision_model` REMOTE
+  `PROJECT_ID.object_tables_dataset.vision_model` REMOTE
 WITH CONNECTION `projects/ajmalaziz-814-20250326021733/locations/us/connections/vertex_connection` 
 OPTIONS (REMOTE_SERVICE_TYPE = 'CLOUD_AI_VISION_V1');
 
