@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------------------------------------------
 -- We create an object table (we support PDFs, Images, Audio, etc.)
 ------------------------------------------------------------------------------------------------------------------
-CREATE OR REPLACE EXTERNAL TABLE `edg_drinks.invoices_object_tables`
+CREATE OR REPLACE EXTERNAL TABLE `object_tables_datase.invoices_object_tables`
 WITH CONNECTION `projects/PROJECT_ID/locations/us/connections/vertex_connection`
 OPTIONS(
   object_metadata = 'SIMPLE',
